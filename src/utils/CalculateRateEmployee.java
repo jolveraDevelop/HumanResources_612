@@ -1,7 +1,9 @@
 
 package utils;
 
+import employees.Director;
 import employees.Employee;
+import employees.Manager;
 
 /**
  *
@@ -9,9 +11,14 @@ import employees.Employee;
  */
 public class CalculateRateEmployee {
     public int calculateRate(Employee e){
-        // para employee rate = 10
-        //para manager rate = 15
-        //para director rate = 20
-        return 1;
+        if(e instanceof Manager){
+            return 15;
+        }else if(e instanceof Director){
+            return 20;
+        }else if(e instanceof Employee){
+            return 10;
+        }else{
+            return 0;
+        }
     }
 }

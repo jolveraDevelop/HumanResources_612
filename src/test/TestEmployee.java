@@ -41,12 +41,17 @@ public class TestEmployee {
         
         // Se usa polimorfismo para invocar virtualmente el método getDetails
         Employee m1 = new Manager("Pedro", "Gonzalez", "pGonzal", jAdministrationManager);
-        //m1.setSecretary(e1);
+        ((Manager)m1).setSecretary(e1);
+        
+//      Es equivalente a la linea anterior
+//      Manager tmp = (Manager)m1;
+//      tmp.setSecretary(e1);
+        
         m1.setDepartment(dAdministration);
         
         //System.out.println(e1.getDetails());
         
-        System.out.println(m1.getDetails());
+       // System.out.println(m1.getDetails());
         
         
         
