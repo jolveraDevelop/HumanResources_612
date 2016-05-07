@@ -38,38 +38,49 @@ public class TestEmployee {
         Employee e1 = new Employee("Karen", "Colmenares",
                 "KCOLMENA", jSecretary);
         e1.setDepartment(dAdministration);
-
-        Employee e2 = new Employee("Pat", "Fay", "PFAY",
-                jGraphicDesigner);
-        e2.setDepartment(dIT);
-
-        Employee e3 = new Employee("Sigal", "Tobias",
-                "STOBIAS", jProgrammer);
-        e3.setDepartment(dIT);
-
-        Employee e4 = new Employee("Karen", "Colmenares",
-                "KCOLMENA", jSecretary);
-        e4.setDepartment(dAdministration);
-
-        Manager m1 = new Manager(e1, "Humberto", "Banuelos", "HBANUELOS", jITManager);
-        m1.setDepartment(dIT);
-        m1.setSalary(e1, 3500);
-        m1.setSalary(m1, 25000);
-
-        System.out.println(m1);
-        if (e1.equals(e4)) {
-            System.out.println("EQUALS");
-        }
-
-        /*System.out.println(e2.getDetails());
-         System.out.println(e3.getDetails());
-         System.out.println(e4.getDetails());
-         System.out.println(m1.getDetails());*/
-        int x = new int[][]{
-            {1, 2, 3}, 
-            {4, 5, 6}, 
-            {8, 9, 10, 11}}[1][2];
-        System.out.println(x);
+        
+        Manager m1 = new Manager("Pedro", "Gonzalez", "pGonzal", jAdministrationManager);
+        m1.setSecretary(e1);
+        m1.setDepartment(dAdministration);
+        
+        //System.out.println(e1.getDetails());
+        
+        System.out.println(m1.getDetails());
+        
+        
+        
+//
+//        Employee e2 = new Employee("Pat", "Fay", "PFAY",
+//                jGraphicDesigner);
+//        e2.setDepartment(dIT);
+//
+//        Employee e3 = new Employee("Sigal", "Tobias",
+//                "STOBIAS", jProgrammer);
+//        e3.setDepartment(dIT);
+//
+//        Employee e4 = new Employee("Karen", "Colmenares",
+//                "KCOLMENA", jSecretary);
+//        e4.setDepartment(dAdministration);
+//
+//        Manager m1 = new Manager(e1, "Humberto", "Banuelos", "HBANUELOS", jITManager);
+//        m1.setDepartment(dIT);
+//        m1.setSalary(e1, 3500);
+//        m1.setSalary(m1, 25000);
+//
+//        System.out.println(m1);
+//        if (e1.equals(e4)) {
+//            System.out.println("EQUALS");
+//        }
+//
+//        /*System.out.println(e2.getDetails());
+//         System.out.println(e3.getDetails());
+//         System.out.println(e4.getDetails());
+//         System.out.println(m1.getDetails());*/
+//        int x = new int[][]{
+//            {1, 2, 3}, 
+//            {4, 5, 6}, 
+//            {8, 9, 10, 11}}[1][2];
+//        System.out.println(x);
     }
 
 }

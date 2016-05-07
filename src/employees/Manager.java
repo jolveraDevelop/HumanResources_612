@@ -47,7 +47,7 @@ public class Manager extends Employee {
 
     @Override
     public String getDetails() {
-        return super.getDetails()
+        return super.getDetails() + "\n"
                 + "Secretary Details: \n"
                 + "Employee ID: " + secretary.getId() + "\n"
                 + "First name:" + secretary.getFirstName() + "\n"
