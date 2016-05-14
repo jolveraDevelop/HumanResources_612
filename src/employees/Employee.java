@@ -20,6 +20,12 @@ public class Employee {
     public Employee() {
         this.ID = count++;
     }
+    
+    public Employee(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ID = count++;
+    }
 
     public Employee(String firstName, String lastName,
             String email, Job job) {
@@ -146,23 +152,28 @@ public class Employee {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.email);
+        hash = 23 * hash + Objects.hashCode(this.firstName);
+        hash = 23 * hash + Objects.hashCode(this.lastName);
         return hash;
     }
 
+    
+
     @Override
     public boolean equals(Object obj) {
-        if (obj == null) {
+       if(obj == null){
+          return false;
+       }
+       if(!(obj instanceof Employee)){
+          return false; 
+       }
+       Employee aux = (Employee)obj;
+       if(this.firstName.equals(aux.firstName)
+               && this.lastName.equals(aux.lastName)){
+           return true;
+       }else{
             return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Employee other = (Employee) obj;
-        if (!Objects.equals(this.email, other.email)) {
-            return false;
-        }
-        return true;
+       }
     }
     
     

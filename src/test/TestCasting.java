@@ -43,6 +43,8 @@ public class TestCasting {
         
         System.out.println(e1.toString());
         
+        System.out.println
+        
         
     }
 }
