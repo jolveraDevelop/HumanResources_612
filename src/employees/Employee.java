@@ -15,7 +15,7 @@ public class Employee {
     private Date hireDate;
     private Department department;
     private Job job;
-    private static int count;
+    public static int count = 1;
 
     public Employee() {
         this.ID = count++;
@@ -176,6 +176,8 @@ public class Employee {
        }
     }
     
-    
+    public  static int getCount(){
+        return count;
+    }
 
 }
