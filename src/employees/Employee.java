@@ -1,10 +1,11 @@
 package employees;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Serializable{
 
     private final int ID;
     private String firstName;
