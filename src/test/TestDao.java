@@ -32,7 +32,7 @@ public class TestDao {
         
         Employee e1 = new Employee("Roberto", "Olvera", "rolvera",jAdministrationManager );
         e1.setDepartment(dAdministration);
-        Employee e2 = new Employee("Pedro", "Casas", "pcasas",jAdministrationAssistant );
+        Employee e2 = new Employee("Pedro", "Casas", "pcasas",jAdministrationManager );
          e2.setDepartment(dAdministration);
         Employee e3 = new Employee("Mario", "Aguilar", "maguilar",jITManager );
         e3.setDepartment(dIT);

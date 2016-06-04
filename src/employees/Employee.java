@@ -2,10 +2,11 @@ package employees;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Objects;
 
-public class Employee implements Serializable{
+public class Employee implements Serializable, Comparable<Employee>{
 
     private final int ID;
     private String firstName;
@@ -180,5 +181,25 @@ public class Employee implements Serializable{
     public  static int getCount(){
         return count;
     }
+
+    @Override
+    public int compareTo(Employee o) {
+//        Employee tmp = null;
+//        if(o instanceof Employee){
+//            tmp = (Employee)o;
+//        }
+        // si this < o return -1
+        if(this.ID < o.ID){
+            return -1;
+        }
+        // si this > o return 1
+        else if(this.ID > o.ID){
+            return -1;
+        }
+        // si this == o return 0
+        else{
+            return 0;
+        }
+     }
 
 }

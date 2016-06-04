@@ -10,7 +10,7 @@ import employees.Job;
  */
 public class TestComparacion {
     public static void main(String[] args) {
-          Job jAdministrationManager = new Job("Administration Manager", 15000, 30000);
+        Job jAdministrationManager = new Job("Administration Manager", 15000, 30000);
         Job jProgrammer = new Job("Programmer", 4000, 15000);
         Job jDirector = new Job("Director", 55000, 105000);
         Job jSecretary = new Job("Secretary", 2500, 4500);
