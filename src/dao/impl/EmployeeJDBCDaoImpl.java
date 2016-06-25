@@ -1,9 +1,15 @@
 
 package dao.impl;
 
+import dao.exceptions.DaoException;
 import dao.interfaces.IEmployeeDao;
 import employees.Employee;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -12,8 +18,12 @@ import java.util.List;
 public class EmployeeJDBCDaoImpl implements IEmployeeDao{
 
     @Override
-    public void add(Employee employees) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void add(Employee employees) throws DaoException {
+        try {
+            Connection conn = DriverManager.getConnection("");
+        } catch (SQLException ex) {
+            throw new DaoException(ex);
+        }
     }
 
     @Override

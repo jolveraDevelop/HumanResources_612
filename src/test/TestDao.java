@@ -1,6 +1,7 @@
 
 package test;
 
+import dao.exceptions.DaoException;
 import dao.impl.EmployeeFileDaoImpl;
 import dao.impl.EmployeeMemoryDaoImpl;
 import dao.interfaces.IEmployeeDao;
@@ -9,6 +10,8 @@ import employees.Employee;
 import employees.Job;
 import employees.Location;
 import factory.EmployeeDaoFactory;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -40,9 +43,16 @@ public class TestDao {
         EmployeeDaoFactory factoryEmplDao = new EmployeeDaoFactory();
         IEmployeeDao employeeDao = factoryEmplDao.createEmployeeDao();
         
-        employeeDao.add(e1);
-        employeeDao.add(e2);
-        employeeDao.add(e3);
+        try {
+            employeeDao.add(e1);
+            employeeDao.add(e2);
+            employeeDao.add(e3);
+        } catch (DaoException ex) {
+            ex.printStackTrace();
+        }
+       
+        
+        
         System.out.println("Catalogo de empleados");
         System.out.println(employeeDao.getAllEmployees());
         System.out.println("Buscando employee id 1....");

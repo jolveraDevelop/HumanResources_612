@@ -1,9 +1,14 @@
 
 package dao.impl;
 
+import dao.exceptions.DaoException;
 import dao.interfaces.IEmployeeDao;
 import employees.Employee;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -12,8 +17,12 @@ import java.util.List;
 public class EmployeeFileDaoImpl implements IEmployeeDao{
 
     @Override
-    public void add(Employee employees) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void add(Employee employees) throws DaoException{
+        try {
+            FileInputStream fis = new FileInputStream("");
+        } catch (FileNotFoundException ex) {
+            throw new DaoException(ex);
+        }
     }
 
     @Override
